@@ -1,4 +1,7 @@
-import { range, sum } from '../../../src/exercise_03/rangeAndSum';
+import {
+  range,
+  sum
+} from '../../../src/exercise_03/rangeAndSum';
 
 // Please do NOT modifiy the code in this file.
 describe('for range and sum', () => {

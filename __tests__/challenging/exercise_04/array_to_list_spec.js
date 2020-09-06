@@ -17,13 +17,19 @@ describe('for array to list', () => {
   it('should create list for two element array', () => {
     const list = arrayToList([1, 2]);
     expect(list.value).toEqual(1);
-    expect(list.next).toEqual({ value: 2, next: null });
+    expect(list.next).toEqual({
+      value: 2,
+      next: null
+    });
   });
 
   it('should create list for three element array', () => {
     const list = arrayToList([1, 2, 3]);
     expect(list.value).toEqual(1);
     expect(list.next.value).toEqual(2);
-    expect(list.next.next).toEqual({ value: 3, next: null });
+    expect(list.next.next).toEqual({
+      value: 3,
+      next: null
+    });
   });
 });
