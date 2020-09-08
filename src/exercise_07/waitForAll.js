@@ -25,8 +25,7 @@ export default function waitForAll(...promises) {
         if (count === promises.length) {
           resolve();
         }
-      }, () => {}).
-      finally(() => {
+      }, () => {}).finally(() => {
         if (i === promises.length - 1 && count !== promises.length) {
           reject();
         }
