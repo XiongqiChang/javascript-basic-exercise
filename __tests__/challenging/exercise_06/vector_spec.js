@@ -11,8 +11,12 @@ describe('for vector', () => {
   it('should not set x and y of the vector', () => {
     const vector = new Vector(2, 3);
 
-    expect(() => { vector.x = 3; }).toThrow();
-    expect(() => { vector.y = 4; }).toThrow();
+    expect(() => {
+      vector.x = 3;
+    }).toThrow();
+    expect(() => {
+      vector.y = 4;
+    }).toThrow();
   });
 
   it('should do plus operation', () => {

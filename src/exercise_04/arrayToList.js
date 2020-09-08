@@ -12,21 +12,22 @@ export default function arrayToList(array) {
   if (array.length == 0) {
     throw new Error('Creating list from empty array');
   }
-  var node;
-  var head = {
+  let node;
+  const head = {
     value: array[0],
-    next: null
+    next: null,
   };
-  var temp = head;
-  for (var i = 1; i < array.length; i++) {
+  let temp = head;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 1; i < array.length; i++) {
     node = {
       value: array[i],
-      next: null
+      next: null,
     };
     temp.next = node;
     temp = node;
   }
   return head;
 
-  //throw new Error('Please delete this line and implement the function');
+  // throw new Error('Please delete this line and implement the function');
 }

@@ -9,10 +9,9 @@ export default function formatNumber(number, option) {
   // * Please do NOT modify the signature of the function.
 
   if (option) {
-    var result = number.toFixed(2);
-    return '$ ' + result.toString();
-  } else {
-    return number.toFixed(2);
+    let result = number.toFixed(2);
+    return '$ { result.toString()}';
   }
-  //throw new Error('Please delete this line and implement the function');
+  return number.toFixed(2);
+  // throw new Error('Please delete this line and implement the function');
 }

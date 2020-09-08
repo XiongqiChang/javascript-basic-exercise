@@ -6,11 +6,14 @@ describe('for wait for all', () => {
   function createDelayedPromise(delayInMs, success = true) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (success) { resolve(); } else { reject(); }
+        if (success) {
+          resolve();
+        } else {
+          reject();
+        }
       }, delayInMs);
     });
   }
-
   it('should throw if not all elements are promises', () => {
     const notAllElementsArePromises = [Promise.resolve(), 2];
     expect(() => waitForAll(...notAllElementsArePromises)).toThrowError('Not all elements are promises.');

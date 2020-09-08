@@ -11,6 +11,32 @@ export default class Vector {
   // * Please implement the class and pass all the tests in vector_spec.js.
   // * Please do NOT modify the signature of the class. Please put all your code in the Vector
   // class.
-
   // PLEASE DELETE THIS LINE AND ADD YOUR IMPLEMENTATION HERE
+  constructor(x, y) {
+    this.X = x;
+    this.Y = y;
+  }
+
+  get x() {
+    return this.X;
+  }
+
+  get y() {
+    return this.Y;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  distance() {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  static plus(vector1, vector2) {
+    return new Vector(vector1.x + vector2.x, vector1.y + vector2.y);
+  }
+
+  static minus(vector1, vector2) {
+    return new Vector(vector1.x - vector2.x, vector1.y - vector2.y);
+  }
+
 }

@@ -31,12 +31,15 @@ export function sum(...numbers) {
   //
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
-  var sum = 0;
-  if (numbers.length == 0)
+  // eslint-disable-next-line no-shadow
+  let sum = 0;
+  // eslint-disable-next-line eqeqeq
+  if (numbers.length == 0) {
     return 0;
-  for (var i = numbers.length - 1; i >= 0; i--) {
+  }
+  for (let i = numbers.length - 1; i >= 0; i--) {
     sum += numbers[i];
   }
   return sum;
-  //throw new Error('Please delete this line and implement the function');
+  // throw new Error('Please delete this line and implement the function');
 }
